@@ -26,8 +26,9 @@ https://cumbersome-pheasant-bf1.notion.site/f1d44e4ab2c544619e4827d8fb85211c
 # 大澤の環境についてメモ
 
 python 3.11.3
-
 LabelImg 1.8.6
+pyyaml 5.1.1
+Detectron2 0.6
 
 pythonはぐぐって公式からインストーラーをダウンロードし、インストールすればいい。
 
