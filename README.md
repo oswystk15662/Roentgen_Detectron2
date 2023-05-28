@@ -23,22 +23,41 @@ https://cumbersome-pheasant-bf1.notion.site/f1d44e4ab2c544619e4827d8fb85211c
 6.mainにマージさせたいときはバグがないかを確認し、管理してる人に一言伝えましょう（実際の現場がどんな感じかは不明）
 
 
-# 大澤の環境についてメモ
+# 環境についてメモ
+## インストールする必要のあるパッケージとそのバージョン
+・python 3.11.3
+・//LabelImg 1.8.6
 
-python 3.11.3
-LabelImg 1.8.6
-pyyaml 5.1.1
-Detectron2 0.6
+・pyyaml 5.1 「py -3.11 -m pyyaml==5.1」==の左右に空白入れない
 
+・Detectron2 0.6
+・Pillow>=7.1
+・matplotlib
+・pycocotools>=2.0.2
+・termcolor>=1.1
+・yacs>=0.1.8
+・tabulate
+・cloudpickle
+・tqdm>4.29.0
+・tensorboard
+・fvcore<0.1.6,>=0.1.5
+・iopath<0.1.10,>=0.1.7
+・omegaconf>=2.1
+・hydra-core>=1.1
+・black
+・packaging
+
+・torch==1.10.0+cu113 https://pytorch.org/get-started/previous-versions/　ここ参照してバージョンが合ってるか確認。正直もうちょっと最新のやつ使いたい
+・torchvision==0.11.1+cu113
+・torchaudio===0.10.0+cu113
+
+## install時のメモ
 pythonはぐぐって公式からインストーラーをダウンロードし、インストールすればいい。
-
 このときpyrcc5が同時にインストールされたりされなかったりするのはよくわからない。
 
-labelImgのinstallはWindowsPowerShellで僕の場合は
+//labelImgのinstallはWindowsPowerShellで「py -3.11 -m pip install labelImg」をたたけばok。-3.11の部分は自分のバージョンに合わせて変えてください
 
-"Current Directry"> py -3.11 -m pip install labelImg
-
-をたたけばok。-3.11の部分は自分のバージョンに合わせて変えてください
+pyyaml、pytorchもpipでインストールする「py -3.11 -m install torch==1.10.0+cu113 torchvision==0.11.1+cu113 torchaudio===0.10.0+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html」
 
 # 以下メモ
 
@@ -49,35 +68,3 @@ pip install -e '.[dev]'　で少し止まるかもしれないが待てばいけ
 まぁサーバーにあげたときcloneして、諸々インストールすれば即使えるみたいな環境が作れたのでヨシ☞
 
 detectron2で大腿骨、膝などのセグメンテーションが可能かを調べる。またセグメンテーションの細かさを指定する変数を見つける。
-
-# サーバーのディレクトリ構造
-```c++
-SIG_Roentgen
-├諸々
-├lib/
-│├必要な諸々
-│├学習済みデータ
-├src/
-│├web_controller.py//ここから↓を呼び出す形に
-│├det_femur.py//大腿骨 det = detection
-│├det_knee.py
-│├det_spine.py 脊椎
-│├index.html 
-│├stylesheet.css
-├Resources/
-│├subjects/
-││├raw/
-││├processed/
-│├web/
-││├.icoなど
-
-/*
-フォルダ名は現場で使われそうなやつを知らないのでとりあえず、、
-撮った写真に関して「 raw_" 日付時刻"」、「 done_"日付時刻"」などにするとpythonでチェックしやすい。
-3つ用意したほうがいいと思った記憶があるがなぜかは忘れた
-html単体で写真とる機能がある
-webアプリは渡辺さんがやったことあるのでかなり頼れる
-*/
-```
-
-カレントディレクトリは"SIG_roentgen"が都合がいいかも
