@@ -68,3 +68,6 @@ pip install -e '.[dev]'　で少し止まるかもしれないが待てばいけ
 まぁサーバーにあげたときcloneして、諸々インストールすれば即使えるみたいな環境が作れたのでヨシ☞
 
 detectron2で大腿骨、膝などのセグメンテーションが可能かを調べる。またセグメンテーションの細かさを指定する変数を見つける。
+
+https://kitigai.hatenablog.com/entry/2019/08/06/003834
+デフォルトだとdetectron2がfacebookのgithubにpushし始めるので上のように、「cd ./detectron2」、「git remote set-url origin https://github.com/oswystk15662/Roentgen_Detectron2」「cd ..」をしてからadd、commit、pushをしてください。
