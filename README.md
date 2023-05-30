@@ -26,18 +26,15 @@ https://cumbersome-pheasant-bf1.notion.site/f1d44e4ab2c544619e4827d8fb85211c
 # 大澤の環境についてメモ
 
 python 3.11.3
-
-LabelImg 1.8.6
-
 pythonはぐぐって公式からインストーラーをダウンロードし、インストールすればいい。
-
 このときpyrcc5が同時にインストールされたりされなかったりするのはよくわからない。
 
-labelImgのinstallはWindowsPowerShellで僕の場合は
+LabelImg 1.8.6
+labelImgのinstallはWindowsPowerShellで僕の場合は「"Current Directry"> py -3.11 -m pip install labelImg」をたたけばok。-3.11の部分は自分のバージョンに合わせて変えてください
 
-"Current Directry"> py -3.11 -m pip install labelImg
-
-をたたけばok。-3.11の部分は自分のバージョンに合わせて変えてください
+coco-annotatorは　https://qiita.com/PoodleMaster/items/39830656d69d34a39f34　の通りにやる
+Ubuntu必須なので、くそほど容量持ってかれるので注意
+はっきり言ってクソアプリなのでこの方法いがいでcocoファイルを生成したい
 
 # 以下メモ
 
