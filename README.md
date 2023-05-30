@@ -32,8 +32,9 @@ pythonはぐぐって公式からインストーラーをダウンロードし�
 LabelImg 1.8.6
 labelImgのinstallはWindowsPowerShellで僕の場合は「"Current Directry"> py -3.11 -m pip install labelImg」をたたけばok。-3.11の部分は自分のバージョンに合わせて変えてください
 
-coco-annotatorは　https://qiita.com/PoodleMaster/items/39830656d69d34a39f34　の通りにやる
-Ubuntu必須なので、くそほど容量持ってかれるので注意
+coco-annotatorは　https://qiita.com/PoodleMaster/items/39830656d69d34a39f34
+の通りにやる
+Ubuntu必須なので、とても容量持ってかれるので注意
 はっきり言ってクソアプリなのでこの方法いがいでcocoファイルを生成したい
 
 # 以下メモ
