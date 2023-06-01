@@ -1,0 +1,32 @@
+<!--参考 
+https://proengineer.internous.co.jp/content/columnfeature/3704
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CT/Roentgen Implant Size Specifier</title>
+        
+    </head>
+    <body>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <p>
+                CT or Roentgen<br>
+                <input type="checkbox" name="mode" value="CT">CT
+                <input type="checkbox" name="mode" value="Roentgen">Roentgen
+            </p>
+            <p>The part Images contain<br>
+                <input type="checkbox" name="part" value="hipBHA">hipBHA
+                <input type="checkbox" name="part" value="hipTHA">hipTHA
+                <input type="checkbox" name="part" value="knee">knee
+            </p>
+            <p>Images：<br><input type="file" id="upload" capture="camera" accept="image/*"></p>
+
+            <p><input type="submit" value="submit"></p>
+        </form>
+        <h1>
+
+        </h1>
+    </body>
+</html>
